@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trippy Safari</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            animation: colorChange 10s infinite;
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: red;
+            }
+            25% {
+                color: green;
+            }
+            50% {
+                color: blue;
+            }
+            75% {
+                color: yellow;
+            }
+            100% {
+                color: purple;
+            }
+        }
+
+        .elephant {
+            width: 200px;
+            height: auto;
+            transform: rotate(45deg);
+            animation: elephantParade 20s infinite linear;
+        }
+
+        @keyframes elephantParade {
+            0% {
+                transform: translateX(-100px) rotate(45deg);
+            }
+            25% {
+                transform: translateX(100px) translateY(-50px) rotate(45deg);
+            }
+            50% {
+                transform: translateX(200px) translateY(100px) rotate(45deg);
+            }
+            75% {
+                transform: translateX(-100px) translateY(200px) rotate(45deg);
+            }
+            100% {
+                transform: translateX(-100px) rotate(45deg);
+            }
+        }
+
+        .polar-bear {
+            width: 150px;
+            height: auto;
+            animation: polarBearFloat 8s infinite ease-in-out;
+        }
+
+        @keyframes polarBearFloat {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Whacky animation for the photo */
+        .photo-whacky {
+            width: 250px;
+            height: auto;
+            animation: spinScale 10s infinite ease-in-out;
+        }
+
+        @keyframes spinScale {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+            25% {
+                transform: rotate(90deg) scale(1.2);
+            }
+            50% {
+                transform: rotate(180deg) scale(0.8);
+            }
+            75% {
+                transform: rotate(270deg) scale(1.2);
+            }
+            100% {
+                transform: rotate(360deg) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Trippy Safari</h1>
+        <img class="elephant" src="elephant.png" alt="Trippy Elephant">
+        <p>While reminiscing about the polar bears...</p>
+        <img class="polar-bear" src="polar_bear.png" alt="Floating Polar Bear">
+
+        <!-- Inserted whacky photo here -->
+        <img class="photo-whacky" src="Screen_Shot_2023-09-10_at_10.32.30_PM.png">
+    </div>
+</body>
+</html>
